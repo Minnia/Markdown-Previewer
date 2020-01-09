@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 let ReactMarkdown = require("react-markdown");
+import { DivOuterContainer } from "./styled";
 // * And last but not least, let's not forget embedded images:
 //  ![React Logo w/ Text](https://goo.gl/Umyytc )
 const MarkdownPreview = () => {
@@ -57,37 +58,47 @@ Code block
     setMarkdownPreview(event.target.value);
   };
   return (
-    <div
-      style={{
-        marginTop: "12vh",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-evenly"
-      }}
-    >
-      <div>
-        <textarea
-          id="editor"
-          onChange={inputChange}
-          style={{
-            width: 600,
-            height: 600
-          }}
-          value={markdownPreview}
-        ></textarea>
-      </div>
-
+    <div>
+      <h1 style={{ textAlign: "center" }}>Welcome to the Markdown Previewer</h1>
       <div
-        id="preview"
         style={{
-          width: 600,
-          height: 600,
-          border: "1px solid black",
-          fontSize: 10
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          marginLeft: "8%",
+          marginRight: "8%",
+          fontWeight: "bold"
         }}
       >
-        <ReactMarkdown source={markdownPreview} escapeHtml={false} />
+        <p>Editor</p>
+        <p>Previewer</p>
       </div>
+      <DivOuterContainer>
+        <div>
+          <textarea
+            id="editor"
+            onChange={inputChange}
+            value={markdownPreview}
+            style={{
+              width: 600,
+              height: 600,
+              border: "none"
+            }}
+          ></textarea>
+        </div>
+
+        <div
+          id="preview"
+          style={{
+            width: 600,
+            height: 600,
+            backgroundColor: "white",
+            fontSize: 10
+          }}
+        >
+          <ReactMarkdown source={markdownPreview} escapeHtml={false} />
+        </div>
+      </DivOuterContainer>
     </div>
   );
 };
