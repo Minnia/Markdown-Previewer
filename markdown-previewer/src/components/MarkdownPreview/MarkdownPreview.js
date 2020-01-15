@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 let ReactMarkdown = require("react-markdown");
-import { DivOuterContainer } from "./styled";
+import { DivOuterContainer, Test } from "./styled";
 // * And last but not least, let's not forget embedded images:
 //  ![React Logo w/ Text](https://goo.gl/Umyytc )
 const MarkdownPreview = () => {
@@ -60,19 +60,19 @@ Code block
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Welcome to the Markdown Previewer</h1>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          marginLeft: "8%",
-          marginRight: "8%",
-          fontWeight: "bold"
-        }}
+      <Test
+      // style={{
+      //   display: "flex",
+      //   flexDirection: "row",
+      //   justifyContent: "space-between",
+      //   marginLeft: "8%",
+      //   marginRight: "8%",
+      //   fontWeight: "bold"
+      // }}
       >
         <p>Editor</p>
         <p>Previewer</p>
-      </div>
+      </Test>
       <DivOuterContainer>
         <div>
           <textarea
