@@ -1,13 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import MarkdownPreview from "./components/MarkdownPreview";
-class App extends Component {
-  render() {
-    return (
+import Welcome from "./components/Welcome/Welcome";
+const App = () => {
+  return (
+    <div>
       <div className="App">
         <MarkdownPreview />
       </div>
-    );
-  }
-}
+      <div>
+        <Welcome name="Jasmine" />
+      </div>
+    </div>
+  );
+};
 
 export default App;

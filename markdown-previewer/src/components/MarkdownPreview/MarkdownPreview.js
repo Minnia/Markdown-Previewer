@@ -60,16 +60,7 @@ Code block
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Welcome to the Markdown Previewer</h1>
-      <Test
-      // style={{
-      //   display: "flex",
-      //   flexDirection: "row",
-      //   justifyContent: "space-between",
-      //   marginLeft: "8%",
-      //   marginRight: "8%",
-      //   fontWeight: "bold"
-      // }}
-      >
+      <Test>
         <p>Editor</p>
         <p>Previewer</p>
       </Test>
