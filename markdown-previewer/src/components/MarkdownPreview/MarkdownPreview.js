@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 let ReactMarkdown = require("react-markdown");
 import { DivOuterContainer, Test } from "./styled";
-// * And last but not least, let's not forget embedded images:
-//  ![React Logo w/ Text](https://goo.gl/Umyytc )
 const MarkdownPreview = () => {
   const [
     markdownPreview,
